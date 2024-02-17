@@ -8,7 +8,16 @@
     font-size: 20px;
 }
 
-nav{
+/* defined root variables for easier styling */
+:root{
+    --primary-gray: rgb(102, 94, 94);
+    --secondary-gray: rgba(146, 140, 140, 0.627);
+    --primary-blue: rgb(111, 154, 192);
+    --secondary-blue: rgba(141, 191, 234, 0.965);
+}
+
+
+.large-nav{
     padding: 12px 0;
     background-color: rgb(207, 230, 250);
 }
@@ -20,9 +29,8 @@ nav{
 
 .main-header{
     font-family: Lobster;
-    color: rgba(146, 140, 140, 0.627);
+    color: var(--secondary-gray);
     background-color: rgba(141, 191, 234, 0.965);
-    /*font-size: 55px;*/
     font-size: 2.75em;
     width: 25%;
     text-align: end;
@@ -49,11 +57,10 @@ nav{
 }
 
 .nav-list a:hover{
-    background-color: rgb(114, 151, 183);
+    background-color: var(--secondary-blue);
     border-radius: 5px;
 }
 
-/* DONE WITH NAVIGATION STYLING */
 img{
     max-width: 100%;
 }
@@ -69,7 +76,7 @@ img{
 
 .image figcaption{
     position: absolute; /* allows text to be placed over the image element */
-    font-size: 2.25em; /* 45px */
+    font-size: 2.25em;
     right: 45px;
     bottom: 30px;
     padding: 4px;
@@ -79,8 +86,10 @@ img{
     background-color: rgb(162, 199, 232);
 }
 
-/* DONE WITH HEADER STYLING*/
-
+/* darkens work images when hovered over */
+.work-figure:hover{
+    filter: brightness(75%);
+}
 
 .container{
     display: grid;
@@ -93,15 +102,17 @@ img{
 
 .header-container{
     justify-self: end;
-    font-size: 1.25em; /*25px*/
+    font-size: 1.25em; 
     font-family: Merriweather;
-    color: rgb(102, 94, 94);
+    color: var(--primary-gray);
     font-weight: bolder;
+    padding-right: 10px;
+    border-right: 4px solid var(--secondary-gray);
 }
 
 .content-container{
     font-family: Merriweather;
-    color: rgb(102, 94, 94);
+    color: var(--primary-gray);
 }
 
 .profilepic{
@@ -111,10 +122,9 @@ img{
 
 .work-container img{
     border-radius: 12px;
-    border: 4px solid rgb(111, 154, 192);
+    border: 4px solid var(--primary-blue);
 }
 
-/* wepage styling*/
 .work-figure{
     position: relative;
 }
@@ -122,16 +132,12 @@ img{
 .work-figure figcaption{
     position: absolute;
     color: white;
-    font-size: 0.75em; /*15px*/
+    font-size: 0.75em;
     left: 0px;
     bottom: 50px;
-    background-color: rgb(111, 154, 192);
+    background-color: var(--primary-blue);
     border-radius: 4px;
-    border: 4px solid rgb(111, 154, 192);
-}
-
-.work-figure img:hover{
-    opacity: 1;
+    border: 4px solid var(--primary-blue);
 }
 
 .contact-container{
@@ -142,14 +148,15 @@ img{
 }
 
 .contact-container a{
-    color: rgb(102, 94, 94);
+    color: var(--primary-gray);
 }
 
 .contact-container a:hover{
-    background-color: rgba(145, 188, 226, 0.705);
+    background-color: var(--secondary-blue);
     border-radius: 5px;
 }
 
+/* Makes webpage elements responsive */
 @media (max-width: 786px){
     *{
         font-size: 15px;
