@@ -16,25 +16,17 @@
     --secondary-blue: rgba(141, 191, 234, 0.965);
 }
 
+header{
+    font-size: 3.5em;
+    font-family: Lobster;
+    color: var(--secondary-gray) ;
+    background-color: rgb(207, 230, 250);
+    text-align: center;
+}
 
 .large-nav{
     padding: 12px 0;
     background-color: rgb(207, 230, 250);
-}
-
-/*pushes main-header to left side of navbar */
-.nav-item:first-child{
-    margin-right: auto;
-}
-
-.main-header{
-    font-family: Lobster;
-    color: var(--secondary-gray);
-    background-color: rgba(141, 191, 234, 0.965);
-    font-size: 2.75em;
-    width: 25%;
-    text-align: end;
-    border-radius: 5px;
 }
 
 .nav-list{
@@ -47,7 +39,7 @@
 }
 
 .nav-list a{
-    color: rgba(251, 241, 226, 0.989);
+    color: rgba(250, 241, 227, 0.989);
     text-decoration: underline;
     font-size: 1em;
     font-weight: bold;
@@ -82,13 +74,8 @@ img{
     padding: 4px;
     border-radius: 5px;
     font-family: Lobster;
-    color: rgba(230, 223, 223, 0.752);
+    color: rgba(239, 236, 236, 0.752);
     background-color: rgb(162, 199, 232);
-}
-
-/* darkens work images when hovered over */
-.work-figure:hover{
-    filter: brightness(75%);
 }
 
 .container{
@@ -120,9 +107,18 @@ img{
     width: 15%;
 }
 
+h3{
+    padding: 10px;
+}
+
 .work-container img{
     border-radius: 12px;
     border: 4px solid var(--primary-blue);
+}
+
+/* darkens work images when hovered over */
+.work-figure:hover{
+    filter: brightness(75%);
 }
 
 .work-figure{
